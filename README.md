@@ -15,6 +15,7 @@ A utility token represents access to a future product or service. When you buy a
     Max Supply: 143000000000 DION 
     Circulating Supply: 3900000000
     Block Time: 1M
+    Stake Reward Locktime: 100 blocks
     Block Reward: 222.22
     Mining Algorithm: Equihash
     RPCPORT: 23895
