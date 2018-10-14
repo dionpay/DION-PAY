@@ -1,88 +1,70 @@
-# Zilla-Chain
-## Specifications and uses of the ZILLA Utility Chain
+# Dion Pay-Chain
+## Specifications and uses of the Dion Pay Utility Chain
 
-Zilla Chain version 0.1.0 beta
+Dion Pay Chain version 0.1.0 beta
 
-"ZILLA" is the ticker for the ChainZilla token. ZILLA is a utility token, which gives our users access to the services provided by ChainZilla.io
+"DION" is the ticker for the Dion Pay token. Dion Pay is a utility token, which gives our users access to the services provided by www.dionpay.com
 
 
 ## What is a utility token?
 
-A utility token represents access to a future product or service. When you buy a utility token, you are buying your “right” to use a service that’s being developed by a project once it’s finished and launched. ChainZilla plans to extend the functionalities and implement them into the company structure and services we offer. 
-
-## How may I use the ZILLA utility token?
-
-ZILLA token holders are able to exchange their tokens for ChainZilla services such as Komodo notarizations, blockchain deployment, app & web development, and cyber security services. In addition we plan to establish strong governance over our operations, token holders will be able to participate in community votes when ChainZilla deems appropriate.
-
-## ZILLA Mainnet Tech Specification
-
-    Max Supply: 11 Million ZILLA
-    Block Time: 1M
-    Block Reward: 0.00001
-    Mining Algorithm: Equihash
-    RPCPORT: 10041
-    This version of Komodo Independent Chain contains Bitcore support for komodo and all its assetchains.
+A utility token represents access to a future product or service. When you buy a utility token, you are buying your “right” to use a service that’s being developed by a project once it’s finished and launched. ChainDion Pay plans to extend the functionalities and implement them into the company structure and services we offer.
     
-## TESTZILLA Tech Specification
+## Dion Pay Tech Specification
 
-    Max Supply: 11 Million ZILLA
+    Max Supply: 143000000000 DION 
+    Circulating Supply: 3900000000
     Block Time: 1M
-    Block Reward: 0.00001
+    Block Reward: 222.22
     Mining Algorithm: Equihash
-    RPCPORT: 8250
+    RPCPORT: 23895
     This version of Komodo Independent Chain contains Bitcore support for komodo and all its assetchains.    
 
-## CHAINZILLA Resources
+## Dion Pay Resources
 
-    Website: https://www.chainzilla.io
-    Twitter: https://twitter.com/Chainzillaio
-    HelpDesk: http://support.chainzilla.io/support/home
-    BitcoinTalk: https://bitcointalk.org/index.php?topic=4456446.msg39886899#msg39886899
-    Email: contact@chainzilla.io  
+    Website: https://www.dionpay.com
+    Twitter: https://twitter.com/DionPay
+    BitcoinTalk: 
+    Email: 
     
-## About CHAINZILLA
 
-ChainZilla was conceived with the purpose of raising the bar in terms of the quality of the applications and blockchains being used in the industry. Additionally, our goal is to facilitate the use of open source technology such as atomic swaps, native blockchain deployment, and smart contracts in different sectors. These fields includes real estate, finance, non-profit, and academic. Corporations are dedicating resources to find out how much business they can gain by adopting blockchain technology. Blockchain has the potential of a trans-formative technology. It allows solving two important issues, those of centralized trust and the speed of operations. Blockchain will not remain a purely fintech phenomenon and has set itself up for wider B2B applications in the coming decade. ChainZilla will play a major role in bringing blockchain technology to regions that are still in their infancy in regards to blockchain and fintech technology such as LATAM. 
 ## Getting started
 Dependencies
 ------------
 Install Komodo: https://docs.komodoplatform.com/en/latest/komodo/install-Komodo-manually.html#installing-komodo-manually
 
-After installing the Komodo repository, follow the steps:
+After installing the Komodo repository, DONOT run the Komodo deamon, instead follow the steps:
 
 `cd Komodo/src`
 
-# Now run the following command to start the ZILLA chain or TESTZILLA chain. 
+# Now run the following command to start the Dion Pay daemon
 
-# Mainnet
-`./komodod -ac_name=ZILLA -ac_supply=11000000 -addnode=54.39.23.248 -gen &`
+`./komodod -ac_name=DION -ac_supply=3900000000 -ac_reward=22260000000 -ac_staked=100 -ac_cc=1 -ac_end=4300000000 -addnode=51.75.124.34`
 
-# Testnet
-`./komodod -ac_name=TESTZILLA -ac_supply=11000000 -addnode=158.69.0.53 &`
 
-Once the ZILLA chain is synched, you are able to use the wallet functionality
+Once the Dion Pay chain is synched, you are able to use the wallet functionality
 
-# Commands 
+# Commands
 In order to perform a command you must navigate to
 
 `cd komodo src`
 
 and execute commands with the following prefix
 
-`./fiat-cli ZILLA`
+`./komodo-cli -ac_name=DION`
 
 i.e. Command to get wallet info
 
-`./fiat-cli ZILLA getinfo`
+`./komodo-cli -ac_name=DION getinfo`
 
 # Main Commands
 ## Wallet
-- getinfo 
+- getinfo
 - backupwallet "destination"
-- dumpprivkey "zillaaddress"
+- dumpprivkey "Dion Pay address"
 - dumpwallet "filename"
 - encryptwallet "passphrase"
-- getaccount "ZILLA_address"
+- getaccount "Dion Pay_address"
 - getaccountaddress "account"
 - getaddressesbyaccount "account"
 - getbalance ( "account" minconf includeWatchonly )
@@ -90,7 +72,7 @@ i.e. Command to get wallet info
 - getrawchangeaddress
 - getwalletinfo
 - importaddress "address" ( "label" rescan )
-- importprivkey "komodoprivkey" ( "label" rescan )
+- importprivkey "dionprivkey" ( "label" rescan )
 - importwallet "filename"
 - listaccounts ( minconf includeWatchonly)
 - listaddressgroupings
@@ -99,12 +81,12 @@ i.e. Command to get wallet info
 - listunspent ( minconf maxconf  ["address",...] )
 - lockunspent unlock [{"txid":"txid","vout":n},...]
 - resendwallettransactions
-- sendfrom "fromaccount" "toZILLAaddress" amount ( minconf "comment" "comment-to" )
+- sendfrom "fromaccount" "toDion Payaddress" amount ( minconf "comment" "comment-to" )
 - sendmany "fromaccount" {"address":amount,...} ( minconf "comment" ["address",...] )
-- sendtoaddress "ZILLA_address" amount ( "comment" "comment-to" subtractfeefromamount )
-- setaccount "ZILLA_address" "account"
+- sendtoaddress "Dion Pay_address" amount ( "comment" "comment-to" subtractfeefromamount )
+- setaccount "Dion Pay_address" "account"
 - settxfee amount
-- signmessage "ZILLA address" "message"
+- signmessage "Dion Pay address" "message"
 
 ## Zero Knowledge Addresses
 - z_exportkey "zaddr"
@@ -141,7 +123,7 @@ i.e. Command to get wallet info
 - getdifficulty
 - getspentinfo
 
-## Control 
+## Control
 - getinfo
 - help ( "command" )
 - stop
@@ -166,7 +148,7 @@ i.e. Command to get wallet info
 ## For all commands type the following
 ```
 cd komodo/src
-./komodo-cli -ac_name=ZILLA help
+./komodo-cli -ac_name=DION help
 ```
 ## About Komodo
 
@@ -182,6 +164,7 @@ Komodo is based on Zcash and has been  by their innovative consensus algorithm c
     Peerchains - Scalability solution where sibling chains form a network of blockchains
     More in depth covered here
     Also note you receive 5% APR on your holdings. See this article for more details
+    CryptoConditions - UTXO based smart and simple contracts
 
 
 ## Komodo Development Resources
@@ -206,9 +189,6 @@ time after this one year period. The automatic feature is based on block
 height and can be explicitly disabled.
 
 
-**Komodo is unfinished and highly experimental, use at your own risk.**
-
-
 Building
 --------
 Build Zcash along with most dependencies from source by running
@@ -216,6 +196,7 @@ Build Zcash along with most dependencies from source by running
 
 **NOTE TO EXCHANGES:**
 https://bitcointalk.org/index.php?topic=1605144.msg17732151#msg17732151
+
 There is a small chance that an outbound transaction will give an error due to mismatched values in wallet calculations. There is a -exchange option that you can run komodod with, but make sure to have the entire transaction history under the same -exchange mode. Otherwise you will get wallet conflicts.
 
 **To change modes:**
