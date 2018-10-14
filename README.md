@@ -25,7 +25,7 @@ A utility token represents access to a future product or service. When you buy a
     Website: https://www.dionpay.com
     Twitter: https://twitter.com/DionPay
     BitcoinTalk: 
-    Email: 
+    Email: info@dionpay.com
     
 
 ## Getting started
