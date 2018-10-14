@@ -211,12 +211,12 @@ d) resume sync till it gets to chaintip
 
 For example:
 ```shell
-./komodod -exportdir=/tmp &
-./komodo-cli dumpwallet example
-./komodo-cli stop
-mv ~/.komodo ~/.komodo.old && mkdir ~/.komodo && cp ~/.komodo.old/komodo.conf ~/.komodo.old/peers.dat ~/.komodo
-./komodod -exchange -exportdir=/tmp &
-./komodo-cli importwallet /tmp/example
+./komodod -ac_name=DION -exportdir=/tmp &
+./komodo-cli -ac_name=DION dumpwallet example
+./komodo-cli -ac_name=DION stop
+mv ~/.komodo/DION ~/.komodo/DION.old && mkdir ~/.komodo/DION && cp ~/.komodo/DION.old/DION.conf ~/.DION.old/peers.dat ~/.komodo
+./komodod -ac_name=DION -exchange -exportdir=/tmp &
+./komodo-cli -ac_name=DION importwallet /tmp/example
 ```
 
 License
